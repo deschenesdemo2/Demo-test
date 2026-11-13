@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace VeracodeDemo
@@ -15,12 +16,14 @@ namespace VeracodeDemo
         private readonly ProcessAutoTask _processAutoTask = new();
         private readonly QuoteDataAccess _quoteDataAccess = new();
 
+        [AllowAnonymous]
         [HttpGet("status")]
         public IActionResult Status()
         {
             return Ok(new { message = "Veracode Demo Application is running" });
         }
 
+        [Authorize]
         [HttpGet("generate-token")]
         public IActionResult GenerateToken(string clientId)
         {
@@ -73,8 +76,8 @@ namespace VeracodeDemo
         [HttpGet("read-file")]
         public IActionResult ReadLogFile(string fileName)
         {
-            var result = _logHelper.WriteToFile(fileName);
-            return Ok(new { content = result });
+            _logHelper.WriteToFile(fileName);
+            return Ok("File read");
         }
 
         [HttpGet("redirect")]
