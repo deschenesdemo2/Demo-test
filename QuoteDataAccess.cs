@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace VeracodeDemo
 {
-  public class QuoteDataAccess
+  internal class QuoteDataAccess
   {
     private const string connectionString = "Server=localhost;Database=TestDb;";
 

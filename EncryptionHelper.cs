@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace VeracodeDemo
 {
-  public class EncryptionHelper
+  internal class EncryptionHelper
   {
     public string GenerateToken(string clientId)
     {

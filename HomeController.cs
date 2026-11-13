@@ -6,34 +6,14 @@ namespace VeracodeDemo
     [Route("api/[controller]")]
     public class HomeController : ControllerBase
     {
-        private readonly APIHelper _apiHelper;
-        private readonly EncryptionHelper _encryptionHelper;
-        private readonly HTMLHelper _htmlHelper;
-        private readonly LogHelper _logHelper;
-        private readonly NavigationHelper _navigationHelper;
-        private readonly OrderHelper _orderHelper;
-        private readonly ProcessAutoTask _processAutoTask;
-        private readonly QuoteDataAccess _quoteDataAccess;
-
-        public HomeController(
-            APIHelper apiHelper,
-            EncryptionHelper encryptionHelper,
-            HTMLHelper htmlHelper,
-            LogHelper logHelper,
-            NavigationHelper navigationHelper,
-            OrderHelper orderHelper,
-            ProcessAutoTask processAutoTask,
-            QuoteDataAccess quoteDataAccess)
-        {
-            _apiHelper = apiHelper;
-            _encryptionHelper = encryptionHelper;
-            _htmlHelper = htmlHelper;
-            _logHelper = logHelper;
-            _navigationHelper = navigationHelper;
-            _orderHelper = orderHelper;
-            _processAutoTask = processAutoTask;
-            _quoteDataAccess = quoteDataAccess;
-        }
+        private readonly APIHelper _apiHelper = new();
+        private readonly EncryptionHelper _encryptionHelper = new();
+        private readonly HTMLHelper _htmlHelper = new();
+        private readonly LogHelper _logHelper = new();
+        private readonly NavigationHelper _navigationHelper = new();
+        private readonly OrderHelper _orderHelper = new();
+        private readonly ProcessAutoTask _processAutoTask = new();
+        private readonly QuoteDataAccess _quoteDataAccess = new();
 
         [HttpGet("status")]
         public IActionResult Status()

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace VeracodeDemo
 {
-  public class HTMLHelper
+  internal class HTMLHelper
   {
     public void GenerateHTML(HttpResponse response, string responseMessage)
     {

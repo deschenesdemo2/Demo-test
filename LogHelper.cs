@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VeracodeDemo
 {
-  public class LogHelper
+  internal class LogHelper
   {
     public string WriteToFile(string fileName)
     {

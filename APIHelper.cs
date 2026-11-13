@@ -8,7 +8,7 @@ using System.Web.Http;
 
 namespace VeracodeDemo
 {
-  public class APIHelper
+  internal class APIHelper
   {
     private const string ciscoAPIKey =
         "sk_test_1234567890";

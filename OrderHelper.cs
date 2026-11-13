@@ -9,7 +9,7 @@ using System.Web.Http;
 
 namespace VeracodeDemo
 {
-  public class OrderHelper
+  internal class OrderHelper
   {
     [HttpDelete("admin/delete-order")]
     public IActionResult DeleteOrder(int orderId)

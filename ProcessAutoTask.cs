@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace VeracodeDemo
 {
-  public class ProcessAutoTask
+  internal class ProcessAutoTask
   {
     public void CheckPing(string host)
     {

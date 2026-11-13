@@ -8,7 +8,7 @@ using System.Web.Mvc;
 
 namespace VeracodeDemo
 {
-  public class NavigationHelper : Controller // Inherit from Controller to access Redirect
+  internal class NavigationHelper : Controller // Inherit from Controller to access Redirect
   {
     [Microsoft.AspNetCore.Mvc.HttpGet("redirect")]
     public IActionResult RedirectToUrl(string navigateUrl)
