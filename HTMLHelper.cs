@@ -1,21 +1,22 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace VeracodeDemo
 {
-  internal class HTMLHelper
+  internal class HTMLHelper : Controller
   {
-    public void GenerateHTML(HttpResponse response, string responseMessage)
-    {
-      response.ContentType = "text/html";
-
-      response.WriteAsync(
-          "<html><body>Hello " + responseMessage + "</body></html>"
-      );
+        public void GenerateHTML(HttpResponse response, string responseMessage)
+        {
+            Response.ContentType = "text/html";
+            Response.WriteAsync(
+                "<html><body>Hello " + responseMessage + "</body></html>"
+            );
+        }
     }
-  }
 }

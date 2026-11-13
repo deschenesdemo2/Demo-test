@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,11 +10,11 @@ namespace VeracodeDemo
 {
   internal class LogHelper
   {
-    public string WriteToFile(string fileName)
+    public void WriteToFile(string fileName)
     {
       string path = "/var/app/files/" + fileName;
 
-      return File.ReadAllText(path);
+      File.ReadAllText(path);
     }
   }
 }
