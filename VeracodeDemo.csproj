@@ -6,6 +6,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <LangVersion>latest</LangVersion>
     <InvariantGlobalization>false</InvariantGlobalization>
+    <AssemblyName>VeracodeDemo</AssemblyName>
+    <RootNamespace>VeracodeDemo</RootNamespace>
+    <OutputType>Exe</OutputType>
+    <StartupObject>VeracodeDemo.Program</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
